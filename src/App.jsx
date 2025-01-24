@@ -1,9 +1,36 @@
+import {createBrowserRouter, RouterProvider} from "react-router";
+import Layout from "./Layout.jsx";
+import Home from "./pages/Home.jsx";
+import Photos from "./pages/Photos.jsx";
+import AddPhoto from "./pages/AddPhoto.jsx";
+import About from "./pages/About.jsx";
+
+const router = createBrowserRouter([
+    {
+        element: <Layout/>,
+        children: [
+            {
+                path: '/',
+                element: <Home/>
+            },
+            {
+                path: '/photos',
+                element: <Photos/>
+            },
+            {
+                path: '/photos/create',
+                element: <AddPhoto/>
+            },
+            {
+                path: '/about',
+                element: <About/>
+            }
+        ]
+    }
+]);
+
 function App() {
-  return (
-    <>
-        <h1>Hubble&#39;s 25th Anniversary - A Collection of the Most Stunning Discoveries in Hubble&#39;s Quarter Century Lifetime</h1>
-    </>
-  )
+    return <RouterProvider router={router}/>
 }
 
 export default App
