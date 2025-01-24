@@ -1,15 +1,11 @@
-import {Link, Outlet} from 'react-router'
+import {Outlet} from 'react-router'
+import Navbar from "./Components/Navbar.jsx";
 
 function Layout() {
     return (
         <div>
-            <nav>
-                <Link to={'/'}>Hubble logo</Link>
-                <Link to={'/photos'}>Photo&#39;s</Link>
-                <Link to={'/photos/create'}>Add a photo</Link>
-                <Link to={'/about'}>About hubble</Link>
-            </nav>
-            <main>
+            <Navbar></Navbar>
+            <main className="px-60">
                 <Outlet/>
             </main>
             <footer></footer>

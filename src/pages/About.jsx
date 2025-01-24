@@ -1,6 +1,8 @@
+import MainHeader from "../Components/MainHeader.jsx";
+
 function About() {
     return (
-        <h1>About Hubble</h1>
+        <MainHeader>About Hubble</MainHeader>
     )
 }
 

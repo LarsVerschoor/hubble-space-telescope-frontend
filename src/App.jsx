@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import Photos from "./pages/Photos.jsx";
 import AddPhoto from "./pages/AddPhoto.jsx";
 import About from "./pages/About.jsx";
+import PhotoDetail from "./pages/PhotoDetail.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,9 @@ const router = createBrowserRouter([
             {
                 path: '/photos',
                 element: <Photos/>
+            },
+            {   path: '/photos/:id',
+                element: <PhotoDetail/>
             },
             {
                 path: '/photos/create',

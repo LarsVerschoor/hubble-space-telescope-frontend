@@ -1,6 +1,8 @@
+import MainHeader from "../Components/MainHeader.jsx";
+
 function AddPhoto() {
     return (
-        <h1>Add a new photo</h1>
+        <MainHeader>Add a new photo</MainHeader>
     );
 }
 
