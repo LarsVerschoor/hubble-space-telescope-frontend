@@ -22,7 +22,7 @@ function PhotoList() {
     useEffect(() => {loadPhotos()}, []);
 
     return (
-        <section className="grid grid-cols-3 gap-6 mt-8">
+        <section className="grid grid-cols-auto-fit gap-3 md:gap-5 mt-8">
             {
                 photos.map((photo) => (
                     <PhotoCard key={photo.id} photo={photo}/>

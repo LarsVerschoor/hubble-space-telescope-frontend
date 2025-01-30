@@ -5,7 +5,7 @@ function Layout() {
     return (
         <div>
             <Navbar></Navbar>
-            <main className="px-60">
+            <main className="w-[1100px] max-w-full px-10 mx-auto">
                 <Outlet/>
             </main>
             <footer></footer>

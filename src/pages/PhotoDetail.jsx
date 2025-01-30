@@ -1,6 +1,6 @@
-import SubHeader from "../Components/SubHeader.jsx";
 import {useParams} from "react-router";
 import {useEffect, useState} from "react";
+import MainHeader from "../Components/MainHeader.jsx";
 
 function PhotoDetail() {
     const params = useParams();
@@ -21,7 +21,7 @@ function PhotoDetail() {
 
     return (
         <>
-            <SubHeader>Details of {photo.title}</SubHeader>
+            <MainHeader>Details of {photo.title}</MainHeader>
         </>
     )
 }
