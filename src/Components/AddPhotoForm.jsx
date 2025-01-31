@@ -59,7 +59,7 @@ function AddPhotoForm() {
 
     return (
         pendingResponse ? (<div>Saving discovery...</div>) : (
-            <form method="post" onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 w-[600px] max-w-full">
+            <form method="post" onSubmit={handleSubmit} className="my-8 flex flex-col gap-3 w-[600px] max-w-full">
                 {
                     fetchException && (
                         <div>Failed to save discovery</div>
