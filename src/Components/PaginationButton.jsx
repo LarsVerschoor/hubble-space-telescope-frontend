@@ -1,7 +1,9 @@
 import {Link} from "react-router";
+import {usePhotosContext} from "../Contexts/PhotosContext.jsx";
 
-function paginationButton({page, limit, current, exists, children}) {
+function PaginationButton({page, current, exists, children}) {
     const classes = `bg-black text-white px-3 py-2 rounded ${!exists && 'bg-gray-500 cursor-default'} ${exists && 'hover:bg-gray-800'} ${current && 'underline'}`
+    const {limit} = usePhotosContext();
 
     if (!exists) {
         return (
@@ -14,4 +16,4 @@ function paginationButton({page, limit, current, exists, children}) {
     )
 }
 
-export default paginationButton;
+export default PaginationButton;
