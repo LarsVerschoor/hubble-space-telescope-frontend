@@ -1,7 +1,7 @@
 import {Link} from "react-router";
 
 function paginationButton({page, limit, current, exists, children}) {
-    const classes = `bg-black ${!exists && 'bg-gray-500'} text-white px-2 py-1 ${current && 'underline'}`
+    const classes = `bg-black text-white px-3 py-2 rounded ${!exists && 'bg-gray-500 cursor-default'} ${exists && 'hover:bg-gray-800'} ${current && 'underline'}`
 
     if (!exists) {
         return (

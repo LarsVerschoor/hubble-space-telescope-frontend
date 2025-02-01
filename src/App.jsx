@@ -5,6 +5,7 @@ import Photos from "./pages/Photos.jsx";
 import AddPhoto from "./pages/AddPhoto.jsx";
 import About from "./pages/About.jsx";
 import PhotoDetail from "./pages/PhotoDetail.jsx";
+import PhotoModal from "./Components/PhotoModal.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,10 @@ const router = createBrowserRouter([
             },
             {
                 path: '/photos',
-                element: <Photos/>
+                element: <Photos/>,
+                children: [
+                    { path: ':id', element: <PhotoModal/> }
+                ]
             },
             {   path: '/photos/:id',
                 element: <PhotoDetail/>

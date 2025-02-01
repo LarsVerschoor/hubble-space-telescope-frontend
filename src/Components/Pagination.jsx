@@ -19,17 +19,18 @@ function Pagination ({pagination, page, limit}) {
         pagesToDisplay.push(...[currentPage - 1, currentPage, currentPage + 1])
     }
 
-    console.log(pagesToDisplay)
-
     return (
         <div className="mt-8 flex justify-between items-center">
-            <PaginationButton page={page - 1} limit={limit} current={false} exists={!!pagination?._links?.previous}>Previous</PaginationButton>
+            <PaginationButton page={page - 1} limit={limit} current={false} exists={!!pagination?._links?.previous}>Back</PaginationButton>
             <div className="flex gap-3">
-            {
-                pagesToDisplay.map((page) => (
-                    <PaginationButton page={page} limit={limit} key={page} current={page === currentPage} exists={true}>{page}</PaginationButton>
-                ))
-            }
+                <div className={`${pagesToDisplay[0] !== 1 ? 'text-black' : 'text-transparent select-none'}`}>...</div>
+                {
+
+                    pagesToDisplay.map((page) => (
+                        <PaginationButton page={page} limit={limit} key={page} current={page === currentPage} exists={true}>{page}</PaginationButton>
+                    ))
+                }
+                <div className={`${pagesToDisplay.length === 3 && pagesToDisplay[2] !== totalPages ? 'text-black' : 'text-transparent select-none'}`}>...</div>
             </div>
             <PaginationButton page={page + 1} limit={limit} current={false} exists={!!pagination?._links?.next}>Next</PaginationButton>
         </div>

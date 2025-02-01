@@ -12,4 +12,24 @@
             grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
         }
     }
+
+    .dialog-backdrop::backdrop {
+        @apply bg-black bg-opacity-65;
+    }
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(229 231 235);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(31 41 55);
 }
